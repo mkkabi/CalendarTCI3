@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{header.html :: head('Settings')}">
+</head>
+<body>
+<div th:replace="~{header.html :: navbar}"></div>
+
+<div class="container">
+    <form th:action="@{/import/education-forms}" method="post" accept-charset="UTF-8">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="csvContent">Import Education Forms from CSV:</label>
+            <textarea name="csvContent" type="text" class="form-control col-sm-6" id="csvContent" rows="10" cols="50"
+                      placeholder="Enter CSV data here..."></textarea>
+        </div>
+        <div>
+            <input type="submit" class="btn btn-info" value="Submit"/>
+            <input type="reset" class="btn btn" value="Clear"/>
+        </div>
+    </form>
+
+
+    <form th:action="@{/import/groups}" method="post" accept-charset="UTF-8">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="csvContentGroup">Import Education Forms from CSV:</label>
+            <textarea name="csvContent" type="text" class="form-control col-sm-6" id="csvContentGroup" rows="10" cols="50"
+                      placeholder="Enter CSV data here..."></textarea>
+        </div>
+        <div>
+            <input type="submit" class="btn btn-info" value="Submit"/>
+            <input type="reset" class="btn btn" value="Clear"/>
+        </div>
+    </form>
+
+
+</div>
+
+<br/>
+<br/><br/><br/>
+<footer th:replace="header.html :: footer"></footer>
+</body>
+</html>

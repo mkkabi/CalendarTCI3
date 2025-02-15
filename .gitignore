@@ -1,0 +1,10 @@
+# Project exclude paths
+/target/
+/backup/
+/logs/
+./*.png
+./*.sql
+pom_security.xml
+pom_working.xml
+docker_README.txt
+
